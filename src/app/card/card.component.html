@@ -1,0 +1,17 @@
+<div class="card my-3" style="width: 18rem">
+  <figure>
+    <img [src]="item.images[0]" class="card-img-top" alt="..." />
+  </figure>
+  <div class="card-body">
+    <h5 class="card-title">{{ item.title }}</h5>
+    <p class="card-text">
+      {{ item.description }}
+    </p>
+    <a class="btn btn-primary" (click)="addToCart()">Add to Cart </a>
+    <a
+      class="btn btn-secondary ms-1"
+      [routerLink]="['product-details', item.id]"
+      >Product details
+    </a>
+  </div>
+</div>
